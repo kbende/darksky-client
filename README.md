@@ -20,20 +20,38 @@ Or install it yourself as:
 
     $ gem install darksky
 
+## Configuration
+
+Create an file initializer
+
+```ruby
+Darksky.configure do |c|
+  c.api_key = "YOUR API KEY"
+end
+```
+
 ## Usage
 
-TODO: Write usage instructions here
+Retrieve current weather data by lat/lng coordinates
+
+    $ forecast = Darksky.forecast(lat,lng)
+
+Retrieve historical weather data by lat/lng coordinates
+
+    $ forecast = Darksky.forecast(lat,lng, epoch)
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rspec spec` to run the tests. You can also run `bundle console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/darksky. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
+1. Fork it ( https://github.com/kbende/darksky-client/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
 
 ## License
 
